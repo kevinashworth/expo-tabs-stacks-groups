@@ -1,18 +1,39 @@
 import { Pressable, Text, View } from "react-native";
-
 import { Link } from "expo-router";
 
 export default function HomePage() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>
-        Page "pushed WITHIN" the tab bar because it's UNDER the "tabs" file
-        structure. Upon clicking, the tab bar will remain visible.
+      <Text style={{ padding: 8, fontSize: 20, marginBottom: 16 }}>
+        This page is "pushed WITHIN" the tab bar because it's UNDER the "tabs"
+        file structure. Upon clicking through to{" "}
+        <Text style={{ color: "rgb(0,122,255)" }}>Settings Page</Text>, the tab
+        bar will remain visible.
       </Text>
-
+      <Text
+        style={{
+          padding: 8,
+          fontSize: 12,
+          marginBottom: 16,
+          color: "gray",
+        }}
+      >
+        This page is{" "}
+        <Text style={{ fontFamily: "SpaceMono" }}>
+          app/(tabs)/home/index.tsx
+        </Text>
+      </Text>
       <Link href="/home/settings" asChild>
         <Pressable>
-          <Text> Settings Page</Text>
+          <Text
+            style={{
+              color: "rgb(0,122,255)",
+              fontSize: 20,
+              textDecorationLine: "underline",
+            }}
+          >
+            Settings Page
+          </Text>
         </Pressable>
       </Link>
     </View>

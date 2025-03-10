@@ -6,8 +6,21 @@ export default function DetailsPage() {
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Stack.Screen options={{ headerTitle: `Details #${id} ` }} />
-      <Text>Details for post {id}</Text>
+      <Stack.Screen options={{ headerTitle: `Details Post #${id}` }} />
+      <Text style={{ padding: 8, fontSize: 20, marginBottom: 16 }}>
+        Details for post {id}
+      </Text>
+      <Text
+        style={{
+          padding: 8,
+          fontSize: 12,
+          marginBottom: 16,
+          color: "gray",
+        }}
+      >
+        This page is{" "}
+        <Text style={{ fontFamily: "SpaceMono" }}>app/posts/[id].tsx</Text>
+      </Text>
     </View>
   );
 }

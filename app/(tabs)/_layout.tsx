@@ -20,7 +20,7 @@ export default function Layout() {
         options={{
           title: "Post",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add-circle-sharp" color={color} size={36} />
+            <Ionicons name="add-circle-sharp" color={color} size={size} />
           ),
         }}
       />
