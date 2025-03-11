@@ -18,7 +18,7 @@ export default function Layout() {
       <Tabs.Screen
         name="post"
         options={{
-          title: "Post",
+          title: "Posts",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="add-circle-sharp" color={color} size={size} />
           ),
