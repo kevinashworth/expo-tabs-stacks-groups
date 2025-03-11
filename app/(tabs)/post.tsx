@@ -1,16 +1,18 @@
 //links to open OUTSIDE tab bar
 
+import { ThemedText } from "@/components/ThemedText";
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function PostsPage() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ padding: 8, fontSize: 20, marginBottom: 16 }}>
-        Post detail pages are "pushed ABOVE" the tab bar because `[id].tsx` is
-        OUTSIDE the "tabs" file structure. Upon clicking, the tab bar will NOT
-        be visible.
-      </Text>
+      <ThemedText style={{ padding: 8, fontSize: 20, marginBottom: 16 }}>
+        Post detail pages are "pushed ABOVE" the tab bar because{" "}
+        <Text style={{ fontFamily: "SpaceMono" }}>[id].tsx</Text> is OUTSIDE the{" "}
+        <Text style={{ fontFamily: "SpaceMono" }}>(tabs)</Text> file structure.
+        Upon clicking, the tab bar will NOT be visible.
+      </ThemedText>
       <Link
         href="/posts/1"
         style={{
